@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+
+
+<head><title>Add Reminder</title></head>
+
+
+
+<body>
+
+
+
+<h1>Add Reminder</h1>
+
+
+
+
+
+
+
+<form action=”/reminders/add” method=”POST”>
+
+
+
+
+
+
+
+<label>Title:</label><input type=”text” name=”title” required><br>
+
+
+
+<label>Description:</label><input type=”text” name=”description”><br>
+
+
+
+<label>Email:</label><input type=”email” name=”userEmail” required><br>
+
+
+
+<label>Remind At:</label><input type=”datetime-local” name=”remindAt” required><br>
+
+
+
+<button type=”submit”>Add</button>
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+<a href=”/reminders”>Back</a>
+
+
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
