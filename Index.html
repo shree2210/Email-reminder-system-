@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+
+
+<head>
+
+
+
+    <title>Email Reminder Dashboard</title>
+
+
+
+    <link rel=”stylesheet” href=”/css/style.css”>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<h1>Email Reminder Dashboard</h1>
+
+
+
+
+
+
+
+<a href=”/reminders/add”>Add Reminder</a>
+
+
+
+
+
+
+
+<table border=”1”>
+
+
+
+<tr>
+
+
+
+<th>Title</th><th>Description</th><th>Email</th><th>Remind At</th><th>Status</th><th>Actions</th>
+
+
+
+</tr>
+
+
+
+
+
+
+
+<% reminders.forEach(r => { %>
+
+
+
+
+
+
+
+<tr>
+
+
+
+<td><%= r.title %></td>
+
+
+
+<td><%= r.description %></td>
+
+
+
+<td><%= r.userEmail %></td>
+
+
+
+<td><%= r.remindAt.toLocaleString() %></td>
+
+
+
+<td><%= r.isSent ? ‘Sent’ : ‘Pending’ %></td>
+
+
+
+<td>
+
+
+
+<a href=”/reminders/edit/<%= r._id %>”>Edit</a> |
+
+
+
+<a href=”/reminders/delete/<%= r._id %>”>Delete</a>
+
+
+
+<td>
+
+
+
+</tr>
+
+
+
+<% }) %>
+
+
+
+</table>
+
+
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
